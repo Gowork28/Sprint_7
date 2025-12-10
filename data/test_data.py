@@ -1,18 +1,3 @@
-import random
-import string
-
-class UniqCourierData:
-
-    @staticmethod
-    def register_new_courier_and_return_login_password(length=10):
-        payload = {
-                "login": ''.join(random.choice(string.ascii_lowercase,k=length)),
-                "password": ''.join(random.choice(string.ascii_lowercase,k=length)),
-                "firstName": ''.join(random.choice(string.ascii_lowercase,k=length))
-        }
-        print(payload)
-
-
 class TestDataForOrder:
     VALID_DATA_FOR_ORDER = {
         "firstName": "Hanna",
@@ -28,3 +13,9 @@ class TestDataForOrder:
         ]
     }
 
+class TestDataForCourier:
+    VALID_DATA_FOR_COURIER = {
+        "login": "star",
+        "password": "12341234",
+        "firstName": "twinkle",
+    }

@@ -6,11 +6,11 @@ class CourierMethods:
 
     @staticmethod
     @allure.title("Создание курьера")
-    def create_uniq_courier_data(body):
+    def create_courier_data(body):
         return requests.post(url=UrlsForTest.CREATE_COURIER_URL, json=body)
 
     @staticmethod
-    @allure.title("Логин курьера в системе")
+    @allure.title("Логин курьера в системе и получение его id")
     def login_courier(login, password):
         params = {
             'login': login,
