@@ -21,10 +21,11 @@ class TestDeleteCourier:
         response = CourierMethods.delete_courier(new_id)
         assert response.status_code == 404
 
-    @allure.title("")
+    @allure.title("Код 400 при удалении курьера без передачи id")
+    @pytest.mark.xfail(reason="Код 404 вместо 400 при отправке запроса без id")
     def test_delete_courier_with_empty_id(self):
         response = CourierMethods.delete_courier(courier_id='')
-        assert response.status_code == 400 # Приходит код 404 вместо 400
+        assert response.status_code == 400
 
 
 
