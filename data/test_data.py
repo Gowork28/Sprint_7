@@ -8,9 +8,7 @@ class TestDataForOrder:
         "rentTime": 1,
         "deliveryDate": "2025-12-15",
         "comment": "nihao",
-        "color": [
-            "BLACK"
-        ]
+        "color": ["BLACK"]
     }
 
 class TestDataForCourier:

@@ -9,7 +9,7 @@ class TestCreateOrder:
     @pytest.mark.parametrize("color", [
         (["BLACK"]),
         (["GREY"]),
-        (["BLACK GREY"]),
+        (["BLACK, GREY"]),
         ([""])])
     @allure.title("Код 201 при успешном создании заказа")
     def test_create_order_success(self, delete_order, color):

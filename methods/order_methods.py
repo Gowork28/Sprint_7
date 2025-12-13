@@ -17,7 +17,7 @@ class OrderMethods:
     @staticmethod
     @allure.title("Получить заказ по его номеру")
     def get_order_by_track_number(track):
-        return requests.get(url=UrlsForTest.GET_ORDER_BY_TRACK_URL, params={"track": track})
+        return requests.get(url=UrlsForTest.GET_ORDER_BY_TRACK_URL, params={"t": track})
 
     @staticmethod
     @allure.title("Получение списка заказов")
